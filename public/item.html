@@ -260,7 +260,7 @@
 
         // Try to open the app with custom scheme
         function openApp() {
-          const appUrl = `printhousecatalogue://shared-item?id=${itemId}`;
+          const appUrl = `printhousecatalogue://catalogue-viewer?id=${itemId}`;
 
           // Create a hidden iframe to test if app is installed
           const iframe = document.createElement('iframe');
@@ -301,10 +301,10 @@
         // Set up the manual "Open in App" button
         const openInAppBtn = document.getElementById('openInAppBtn');
         if (openInAppBtn) {
-          openInAppBtn.href = `printhousecatalogue://shared-item?id=${itemId}`;
+          openInAppBtn.href = `printhousecatalogue://catalogue-viewer?id=${itemId}`;
           openInAppBtn.addEventListener('click', function (e) {
             e.preventDefault();
-            window.location.href = `printhousecatalogue://shared-item?id=${itemId}`;
+            window.location.href = `printhousecatalogue://catalogue-viewer?id=${itemId}`;
           });
         }
       }

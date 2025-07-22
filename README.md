@@ -9,7 +9,7 @@ The app uses the custom scheme `printhousecatalogue://` for direct app opening.
 ### URL Format
 
 - **Main app**: `printhousecatalogue://`
-- **Shared item**: `printhousecatalogue://shared-item?id={itemId}`
+- **Shared item**: `printhousecatalogue://catalogue-viewer?id={itemId}`
 
 ### Android App Configuration
 
@@ -36,7 +36,7 @@ For handling shared item URLs:
         <category android:name="android.intent.category.BROWSABLE" />
         <data
             android:scheme="printhousecatalogue"
-            android:host="shared-item" />
+            android:host="catalogue-viewer" />
     </intent-filter>
 </activity>
 ```
@@ -44,8 +44,8 @@ For handling shared item URLs:
 ### Testing
 
 1. **Web testing**: Visit `https://printhouse.zcurv.com/item?id=test123`
-2. **Direct app testing**: Use `printhousecatalogue://shared-item?id=test123`
-3. **Android testing**: `adb shell am start -W -a android.intent.action.VIEW -d 'printhousecatalogue://shared-item?id=test123' com.as360.catalogue`
+2. **Direct app testing**: Use `printhousecatalogue://catalogue-viewer?id=test123`
+3. **Android testing**: `adb shell am start -W -a android.intent.action.VIEW -d 'printhousecatalogue://catalogue-viewer?id=test123' com.as360.catalogue`
 
 ## Features
 
