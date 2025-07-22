@@ -4,6 +4,8 @@ This repository hosts the web fallback pages for PrintHouse Catalogue universal 
 
 **🚀 Deployed on Cloudflare Pages with GitHub integration**
 
+**🔄 Auto-deployment test - ready for Git connection**
+
 ## 🚀 Quick Start
 
 1. **Update Configuration Files**:
