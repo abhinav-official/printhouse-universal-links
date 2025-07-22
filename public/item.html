@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrintHouse Catalogue - View Design</title>
+    <meta
+      name="description"
+      content="View this amazing design from PrintHouse Catalogue. Download our app to see more designs!"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="PrintHouse Catalogue - Amazing Design" />
+    <meta
+      property="og:description"
+      content="Check out this amazing design from PrintHouse Catalogue!"
+    />
+    <meta
+      property="og:image"
+      content="https://printhouse.zcurv.com/og-image.jpg"
+    />
+    <meta property="og:url" content="https://printhouse.zcurv.com/item" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="PrintHouse Catalogue - Amazing Design"
+    />
+    <meta
+      name="twitter:description"
+      content="Check out this amazing design from PrintHouse Catalogue!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://printhouse.zcurv.com/og-image.jpg"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 30px;
+        background: #f8f9fa;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        color: #667eea;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      .design-preview {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        border: 2px dashed #ddd;
+      }
+
+      .design-preview img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .download-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+
+      .download-btn {
+        background: #667eea;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .download-btn:hover {
+        background: #5a6fd8;
+        transform: translateY(-2px);
+      }
+
+      .download-btn.secondary {
+        background: #6c757d;
+      }
+
+      .download-btn.secondary:hover {
+        background: #5a6268;
+      }
+
+      .features {
+        margin-top: 40px;
+        text-align: left;
+      }
+
+      .features h3 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 20px;
+      }
+
+      .feature-list {
+        list-style: none;
+      }
+
+      .feature-list li {
+        color: #666;
+        margin-bottom: 8px;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .feature-list li:before {
+        content: '✓';
+        color: #28a745;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 30px 20px;
+        }
+
+        .download-buttons {
+          flex-direction: column;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">🏠</div>
+
+      <h1>PrintHouse Catalogue</h1>
+      <p>
+        You're trying to view a design from our catalogue. To see this amazing
+        design and explore our full collection, download our app!
+      </p>
+
+      <div class="design-preview">
+        <p><strong>Design Preview</strong></p>
+        <p>
+          This design is available in our app with high-quality images and
+          detailed information.
+        </p>
+      </div>
+
+      <div class="download-buttons">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.as360.catalogue"
+          class="download-btn"
+        >
+          📱 Download for Android
+        </a>
+        <a
+          href="#"
+          class="download-btn secondary"
+          onclick="alert('iOS version coming soon!')"
+        >
+          🍎 Download for iOS
+        </a>
+      </div>
+
+      <div class="features">
+        <h3>What you'll get with our app:</h3>
+        <ul class="feature-list">
+          <li>High-quality design images</li>
+          <li>Detailed product information</li>
+          <li>Easy sharing with friends</li>
+          <li>Favorites and collections</li>
+          <li>Contact information for orders</li>
+          <li>Regular updates with new designs</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      // Get the item ID from URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const itemId = urlParams.get('id');
+
+      if (itemId) {
+        // You can fetch item details here if you have an API
+        console.log('Item ID:', itemId);
+
+        // Update the page title and meta tags with item info
+        document.title = `PrintHouse Catalogue - Design ${itemId}`;
+        document
+          .querySelector('meta[name="description"]')
+          .setAttribute(
+            'content',
+            `View design ${itemId} from PrintHouse Catalogue. Download our app to see this amazing design!`
+          );
+      }
+
+      // Add click tracking for analytics
+      document.querySelectorAll('.download-btn').forEach((btn) => {
+        btn.addEventListener('click', function () {
+          // Track download button clicks
+          console.log('Download button clicked:', this.textContent.trim());
+        });
+      });
+    </script>
+  </body>
+</html>
