@@ -2,6 +2,8 @@
 
 This repository hosts the web fallback pages for PrintHouse Catalogue universal links using the domain `printhouse.zcurv.com`.
 
+**🚀 Deployed on Cloudflare Pages with GitHub integration**
+
 ## 🚀 Quick Start
 
 1. **Update Configuration Files**:
