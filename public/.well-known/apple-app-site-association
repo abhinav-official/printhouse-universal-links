@@ -3,9 +3,9 @@
     "apps": [],
     "details": [
       {
-        "appID": "YOUR_TEAM_ID.com.as360.catalogue",
+        "appID": "TEAM_ID.com.as360.catalogue",
         "paths": [
-          "/item*"
+          "/item/*"
         ]
       }
     ]

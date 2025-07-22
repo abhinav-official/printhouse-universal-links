@@ -217,6 +217,14 @@
         >
           🍎 Download for iOS
         </a>
+        <a
+          href="#"
+          class="download-btn"
+          style="background: #28a745"
+          id="openInAppBtn"
+        >
+          🚀 Open in App
+        </a>
       </div>
 
       <div class="features">
@@ -249,6 +257,56 @@
             'content',
             `View design ${itemId} from PrintHouse Catalogue. Download our app to see this amazing design!`
           );
+
+        // Try to open the app with custom scheme
+        function openApp() {
+          const appUrl = `printhousecatalogue://shared-item?id=${itemId}`;
+
+          // Create a hidden iframe to test if app is installed
+          const iframe = document.createElement('iframe');
+          iframe.style.display = 'none';
+          iframe.src = appUrl;
+          document.body.appendChild(iframe);
+
+          // Set a timeout to detect if app opened
+          let appOpened = false;
+          const timeout = setTimeout(() => {
+            if (!appOpened) {
+              // App not installed, show web page
+              console.log('App not installed, showing web page');
+              iframe.remove();
+            }
+          }, 2000);
+
+          // Listen for page visibility change (app opened)
+          document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+              appOpened = true;
+              clearTimeout(timeout);
+              iframe.remove();
+            }
+          });
+
+          // Alternative method: try window.location
+          setTimeout(() => {
+            if (!appOpened) {
+              window.location.href = appUrl;
+            }
+          }, 100);
+        }
+
+        // Auto-attempt to open app when page loads
+        openApp();
+
+        // Set up the manual "Open in App" button
+        const openInAppBtn = document.getElementById('openInAppBtn');
+        if (openInAppBtn) {
+          openInAppBtn.href = `printhousecatalogue://shared-item?id=${itemId}`;
+          openInAppBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = `printhousecatalogue://shared-item?id=${itemId}`;
+          });
+        }
       }
 
       // Add click tracking for analytics
