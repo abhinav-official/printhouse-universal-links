@@ -4,7 +4,9 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.as360.catalogue",
-      "sha256_cert_fingerprints": ["YOUR_SHA256_FINGERPRINT"]
+      "sha256_cert_fingerprints": [
+        "EA2BA2AB01C9A775EA512E5951C2FAD47A5AB32990366B91F3D29E215D5F33EB"
+      ]
     }
   }
 ]
